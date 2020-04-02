@@ -1,0 +1,98 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 4.5rem;
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease 0s;
+}
+
+.logo:hover {
+  color: red;
+}
+
+nav {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  cursor: pointer;
+  padding: 0 1.2rem;
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease 0s;
+}
+
+nav ul li a:hover {
+  color: red;
+}
+
+.toggleButton {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggleButton .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+@media (max-width: 650px) {
+  header {
+    flex-wrap: wrap;
+  }
+
+  .toggleButton {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav ul li {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .show {
+    display: flex;
+  }
+
+  nav ul {
+    padding: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  nav ul :not(:first-child) {
+    margin-top: 0.5rem;
+  }
+
+  header :nth-child(2) {
+    width: 100%;
+    order: 3;
+  }
+}
+
+/** Treaversy styles **/

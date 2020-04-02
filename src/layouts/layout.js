@@ -13,10 +13,6 @@ const Layout = ({ children }) => {
           name="viewport"
           content="width=device-width, initial-scale=1"
         ></meta>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
       </Helmet>
       <Header />
       {children}

@@ -1,0 +1,18 @@
+.card {
+  -webkit-box-shadow: 2px 18px 75px -46px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 18px 75px -46px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 18px 75px -46px rgba(0, 0, 0, 0.75);
+}
+
+.card-content {
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.card-content p:first-of-type {
+  color: #4b4a4a;
+}
+
+.card-content p a {
+  font-weight: 700;
+}

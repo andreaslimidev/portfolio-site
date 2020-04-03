@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../layouts/layout";
 import layoutStyles from "../layouts/layout.module.css";
+import projectStyles from "./project.module.css";
 import { graphql, useStaticQuery } from "gatsby";
 import ProjectPreview from "../components/ProjectPreview";
 
@@ -32,13 +33,12 @@ export default () => {
   return (
     <Layout>
       <div className={layoutStyles.container}>
-        <div className={layoutStyles.columnLeft}>
+        <div className={projectStyles.columnLeft}>
           <h1 className="heading">Projects</h1>
-          <h2 className="subHeading">Ez</h2>
+          <h2 className="subHeading">(Scroll to view)</h2>
           <p>Project talk</p>
         </div>
-        <div className={layoutStyles.columnRight}>
-          <h1>Here comes projects</h1>
+        <div className={projectStyles.columnRight}>
           {projects.map(({ node: project }) => {
             const title = project.title;
             const description = project.description;
@@ -47,6 +47,7 @@ export default () => {
 
             return (
               <ProjectPreview
+                className={projectStyles.project}
                 title={title}
                 description={description}
                 imageData={imageData}

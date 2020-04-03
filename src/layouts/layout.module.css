@@ -1,7 +1,6 @@
 .layout {
   margin: 1rem auto;
   max-width: 80vw;
-  min-height: 100vw;
 }
 
 .container {
@@ -17,6 +16,7 @@
 
 .columnRight {
   margin-left: auto;
+  overflow: auto;
 }
 
 @media (max-width: 715px) {

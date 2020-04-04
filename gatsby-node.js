@@ -1,3 +1,20 @@
+const path = require("path");
+
+module.exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions;
+
+  if (node.internal.type === "MarkdownRemark") {
+    const slug = path.basename(node.fileAbsolutePath, ".md");
+    console.log("HELOOOOOOOOOOOOOO", slug);
+
+    createNodeField({
+      node,
+      name: "slug",
+      value: slug,
+    });
+  }
+};
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     {
@@ -20,7 +37,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     actions.createPage({
       path: `/${slug}/`,
       component: require.resolve("./src/templates/project.js"),
-      context: { slug }
+      context: { slug },
     });
   });
 };

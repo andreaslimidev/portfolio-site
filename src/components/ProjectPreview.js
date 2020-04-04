@@ -17,7 +17,7 @@ const ProjectPreview = ({ title, slug, url, description, imageData }) => {
             <div className={projectPreviewStyles.cardContent}>
               <p>{description}</p>
               <p>
-                <Link to={`/${slug}/`}>View this project</Link>
+                <Link to={`/${slug}/`}>View this project &rarr;</Link>
               </p>
             </div>
           </Link>

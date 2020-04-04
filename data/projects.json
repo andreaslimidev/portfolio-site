@@ -12,5 +12,12 @@
     "url": "https://example.com",
     "image": "./images/project.jpg",
     "description": "I built this project epic"
+  },
+  {
+    "title": "My portfolio",
+    "slug": "project-2",
+    "url": "https://example.com",
+    "image": "./images/project.jpg",
+    "description": "I built this project epic"
   }
 ]

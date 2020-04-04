@@ -22,11 +22,16 @@
 @media (max-width: 715px) {
   .container {
     grid-template-columns: 1fr;
+    padding-top: 2rem;
   }
 
   .columnRight,
   .columnLeft {
     margin: 0;
     padding: 0;
+  }
+
+  .columnRight {
+    margin-top: 1rem;
   }
 }

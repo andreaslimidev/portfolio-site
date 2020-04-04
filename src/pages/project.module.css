@@ -6,5 +6,11 @@
 }
 
 .columnRight > div:not(:first-child) {
-  margin-top: 4rem;
+  margin-top: 6rem;
+}
+
+@media (max-width: 715px) {
+  .columnRight {
+    padding: 0;
+  }
 }

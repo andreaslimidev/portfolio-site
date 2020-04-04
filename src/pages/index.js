@@ -3,7 +3,6 @@ import Layout, { Container } from "../layouts/layout";
 import styled from "styled-components";
 import layoutStyles from "../layouts/layout.module.css";
 import { graphql, useStaticQuery } from "gatsby";
-import particlesJS from "particles.js";
 
 export default () => {
   return (

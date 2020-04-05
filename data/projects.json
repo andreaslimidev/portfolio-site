@@ -13,13 +13,15 @@
     "slug": "project-2",
     "url": "https://example.com",
     "image": "./images/project.jpg",
-    "description": "I built this project epic"
+    "description": "I built this project epic",
+    "technologies": []
   },
   {
     "title": "My portfolio",
     "slug": "project-2",
     "url": "https://example.com",
     "image": "./images/project.jpg",
-    "description": "I built this project epic"
+    "description": "I built this project epic",
+    "technologies": []
   }
 ]

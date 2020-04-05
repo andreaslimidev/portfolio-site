@@ -9,7 +9,7 @@
   margin-top: 6rem;
 }
 
-@media (max-width: 715px) {
+@media (max-width: 800px) {
   .columnRight {
     padding: 0;
   }

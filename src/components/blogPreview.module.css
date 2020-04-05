@@ -1,0 +1,16 @@
+.card {
+    -webkit-box-shadow: 2px 18px 75px -46px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 18px 75px -46px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 18px 75px -46px rgba(0, 0, 0, 0.75);
+    padding: 1rem;
+  }
+
+  .card p:first-of-type {
+    color: #4b4a4a;
+    margin: 0;
+  }
+
+  .card h2 {
+    margin-bottom: 0.5rem;
+  }
+  

@@ -19,7 +19,7 @@
   overflow: auto;
 }
 
-@media (max-width: 715px) {
+@media (max-width: 800px) {
   .container {
     grid-template-columns: 1fr;
     padding-top: 2rem;

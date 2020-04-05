@@ -3,8 +3,34 @@ import Layout, { Container } from "../layouts/layout";
 import styled from "styled-components";
 import layoutStyles from "../layouts/layout.module.css";
 import { graphql, useStaticQuery } from "gatsby";
+import BlogPreview from '../components/BlogPreview'
+import indexStyles from './index.module.css'
+
+
+
 
 export default () => {
+
+  const data = useStaticQuery(graphql`
+  {
+    allMarkdownRemark {
+      edges {
+        node {
+           excerpt
+          frontmatter {
+            title
+            date
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }`)
+
+  const posts = data.allMarkdownRemark.edges
+
   return (
     <Layout>
       <div className={layoutStyles.container}>
@@ -18,8 +44,18 @@ export default () => {
             time.
           </p>
         </div>
-        <div className={layoutStyles.columnRight}>
-          <h1>Blog posts will go here.</h1>
+        <div className={indexStyles.columnRight}>
+          <h1>Recent posts.</h1>
+          {posts.map(({node : post}) => {
+            const title = post.frontmatter.title
+            const date = post.frontmatter.date
+            const excerpt = post.excerpt
+            const slug = post.fields.slug
+
+            return (
+              <BlogPreview title={title} date={date} excerpt={excerpt} slug={slug} />
+            )
+          })}
         </div>
       </div>
     </Layout>

@@ -7,7 +7,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 const IconContainer = styled.div`
   font-size: 2.2rem;
   display: flex;
-  margin-top: 4rem;
+
 `;
 
 const Icon = styled.a`

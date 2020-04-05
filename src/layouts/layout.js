@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
       <Fade>
       {children}
       </Fade>
-      <Footer />
+      <Footer  />
     </div>
   );
 };

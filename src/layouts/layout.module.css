@@ -1,7 +1,3 @@
-* {
-  overflow: auto;
-}
-
 .layout {
   margin: 1rem auto;
   max-width: 80vw;
@@ -47,4 +43,3 @@
     margin-top: 1rem;
   }
 }
-

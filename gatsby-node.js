@@ -70,7 +70,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       actions.createPage({
         path: `/blog/${slug}/`, 
         component: require.resolve("./src/templates/post.js"), 
-        context: slug
+        context: {
+          slug: slug
+        }
       })
   })
   

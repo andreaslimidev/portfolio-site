@@ -19,5 +19,11 @@ module.exports = {
     },
     "gatsby-transformer-json",
     `gatsby-transformer-remark`
-  ]
+  ], 
+  siteMetadata: {
+    title: `Andreas Limi`,
+    github: `https://github.com/andreaslimidev`,
+    linkedin: `https://linkedin.com`,
+    email: `mailto: andreaslimidev@gmail.com`
+  }
 };

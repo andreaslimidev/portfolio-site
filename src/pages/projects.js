@@ -47,6 +47,7 @@ export default () => {
 
             return (
               <ProjectPreview
+                key={project.id}
                 className={projectStyles.project}
                 title={title}
                 description={description}

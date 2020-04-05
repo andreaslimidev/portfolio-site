@@ -4,7 +4,9 @@
     "slug": "project-1",
     "url": "https://example.com",
     "image": "./images/frontspring.png",
-    "description": "Site built by creating a custom Wordpress theme."
+    "description": "Site built by creating a custom Wordpress theme.", 
+    "technologies": ["Wordpress", "PHP"]
+    
   },
   {
     "title": "My portfolio",

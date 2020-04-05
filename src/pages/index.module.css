@@ -2,7 +2,12 @@
     margin: 0;
     padding: 3rem;
     padding-top: 0;
-    overflow-y: scroll;
+
+  }
+
+  .columnRight > div {
+    height: 65vh;
+    overflow-y: auto;
   }
 
 

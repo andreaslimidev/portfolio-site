@@ -27,11 +27,17 @@ const ImageContainer = styled.div`
   max-width: 700px;
 `
 
+const Container = styled.div`
+  overflow-y: scroll;
+  margin-bottom: 3rem;
+`
+
 const ProjectTemplate = ({ data }) => {
   const project = data.projectsJson;
 
   return (
     <Layout>
+       <Container>
       <h1>{project.title}</h1>
       <ImageContainer>
       <Image fluid={project.image.childImageSharp.fluid} alt={project.title} />
@@ -43,6 +49,7 @@ const ProjectTemplate = ({ data }) => {
           <li>{tech}</li>
         ))}
       </ul>
+      </Container>
     </Layout>
   );
 };

@@ -1,3 +1,7 @@
+* {
+  overflow: auto;
+}
+
 .layout {
   margin: 1rem auto;
   max-width: 80vw;
@@ -9,6 +13,7 @@
   grid-template-columns: 1fr 1fr;
   padding-top: 5rem;
   height: 70vh;
+  overflow: auto;
 }
 
 .columnLeft {

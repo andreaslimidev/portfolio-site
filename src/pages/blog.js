@@ -1,5 +1,5 @@
 import React from "react";
-import Layout, { Container } from "../layouts/layout";
+import Layout from "../layouts/layout";
 import layoutStyles from "../layouts/layout.module.css";
 import blogStyles from "./blog.module.css";
 import BlogPreview from "../components/BlogPreview";
@@ -33,7 +33,10 @@ export default () => {
         <div className={layoutStyles.columnLeft}>
           <h1 className="heading">Blog</h1>
           <h2 className="subHeading">For the occasional post</h2>
-          <p>Blog talk</p>
+          <p>
+            Here I will post mainly about my experiences learning and using
+            technologies.
+          </p>
         </div>
         <div className={blogStyles.columnRight}>
           {posts.map(({ node: post }) => {

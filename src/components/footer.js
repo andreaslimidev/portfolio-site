@@ -1,13 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { FaGithubSquare, FaLinkedin, FaEnvelopeSquare, FaMapMarkerAlt } from "react-icons/fa";
-import { graphql, useStaticQuery } from 'gatsby'
-
+import { FaGithubSquare, FaLinkedin, FaEnvelopeSquare } from "react-icons/fa";
+import { graphql, useStaticQuery } from "gatsby";
 
 const IconContainer = styled.div`
   font-size: 2.2rem;
   display: flex;
-
 `;
 
 const Icon = styled.a`
@@ -15,19 +13,18 @@ const Icon = styled.a`
 `;
 
 const Footer = () => {
-
   const data = useStaticQuery(graphql`
-{
-  site {
-    siteMetadata {
-      title, 
-      github, 
-      linkedin,
-      email
+    {
+      site {
+        siteMetadata {
+          title
+          github
+          linkedin
+          email
+        }
+      }
     }
-  }
-}
-`)
+  `);
 
   return (
     <footer>

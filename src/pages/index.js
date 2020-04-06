@@ -1,6 +1,5 @@
 import React from "react";
-import Layout, { Container } from "../layouts/layout";
-import styled from "styled-components";
+import Layout from "../layouts/layout";
 import layoutStyles from "../layouts/layout.module.css";
 import { graphql, useStaticQuery } from "gatsby";
 import BlogPreview from "../components/BlogPreview";

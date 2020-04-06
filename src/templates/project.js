@@ -1,8 +1,9 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Layout from "../layouts/layout";
+import layoutStyles from "../layouts/layout.module.css";
 import Image from "gatsby-image";
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const query = graphql`
   query($slug: String!) {
@@ -10,7 +11,9 @@ export const query = graphql`
       title
       description
       url
+      detailed
       technologies
+      features
       image {
         childImageSharp {
           fluid {
@@ -22,34 +25,62 @@ export const query = graphql`
   }
 `;
 
-
 const ImageContainer = styled.div`
   max-width: 700px;
-`
+  padding-top: 3rem;
+`;
 
 const Container = styled.div`
-  overflow-y: scroll;
-  margin-bottom: 3rem;
-`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+`;
+
+const Url = styled.p`
+  margin: 0;
+  color: #333;
+`;
 
 const ProjectTemplate = ({ data }) => {
   const project = data.projectsJson;
 
   return (
     <Layout>
-       <Container>
-      <h1>{project.title}</h1>
-      <ImageContainer>
-      <Image fluid={project.image.childImageSharp.fluid} alt={project.title} />
-      </ImageContainer>
-      <p>{project.description}</p>
-      <h4>Technologies used</h4>
-      <ul>
-        {project.technologies.map((tech) => (
-          <li>{tech}</li>
-        ))}
-      </ul>
-      </Container>
+      <div className={layoutStyles.container}>
+        <div className={layoutStyles.columnLeft}>
+          <Link to="/projects">
+            <strong>&larr; Back to all projects</strong>
+          </Link>
+          <h1>{project.title}</h1>
+          <Url>
+            <a href={project.url}>{project.url}</a>
+          </Url>
+          <p>{project.detailed}</p>
+          <Container>
+            <div>
+              <h4>Technologies</h4>
+              <ul>
+                {project.technologies.map((tech) => (
+                  <li>{tech}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h4>Features</h4>
+              <ul>
+                {project.features.map((feature) => (
+                  <li>{feature}</li>
+                ))}
+              </ul>
+            </div>
+          </Container>
+        </div>
+        <ImageContainer>
+          <Image
+            fluid={project.image.childImageSharp.fluid}
+            alt={project.title}
+          />
+        </ImageContainer>
+      </div>
     </Layout>
   );
 };

@@ -1,27 +1,42 @@
 [
   {
+    "title": "My portfolio",
+    "slug": "project-2",
+    "url": "https://andreaslimi.com",
+    "image": "./images/portfolio.png",
+    "description": "My brand new portfolio, created with the Gatsby ecosystem.",
+    "detailed": "My brand new portfolio, created with the Gatsby ecosystem. The site consist of both a blog created from Markdown (.md) files, and project data sourced from JSON. The data is made available through Gatsby's GraphQL API, which is then queried at build time to programatically create pages. ",
+    "technologies": ["Gatbsy", "React", "GraphQL", "HTML", "CSS"],
+    "features": [
+      "Fully responsive",
+      "Markdown blog",
+      "Projects sourced from JSON file",
+      "Programmatically created pages"
+    ]
+  },
+  {
     "title": "Frontspring",
     "slug": "project-1",
-    "url": "https://example.com",
+    "url": "https://frontspring.no",
     "image": "./images/frontspring.png",
-    "description": "Site built by creating a custom Wordpress theme.", 
-    "technologies": ["Wordpress", "PHP"]
-    
+    "description": "Site built by creating a custom Wordpress theme.",
+    "detailed": "My first project creating a custom Wordpress theme. The theme is split up into several 'blocks' which are reused throughout the site. All content on the page is fully editable on the Wordpress dashboard (ACF). Majority of the site graphics are created by me in Adobe Illustrator.",
+    "technologies": ["Wordpress", "PHP", "HTML", "CSS"],
+    "features": [
+      "Fully responsive",
+      "Editable content",
+      "Modular blocks",
+      "Sweet graphics"
+    ]
   },
   {
-    "title": "My portfolio",
-    "slug": "project-2",
+    "title": "Example project",
+    "slug": "project-3",
     "url": "https://example.com",
-    "image": "./images/project.jpg",
-    "description": "I built this project epic",
-    "technologies": []
-  },
-  {
-    "title": "My portfolio",
-    "slug": "project-2",
-    "url": "https://example.com",
-    "image": "./images/project.jpg",
-    "description": "I built this project epic",
-    "technologies": []
+    "image": "./images/example.png",
+    "description": "This is an example project",
+    "detailed": "This is an example project, very cool.",
+    "technologies": ["HTML", "CSS"],
+    "features": ["Amazing UI/UX design", "Passes all WCAG requirements"]
   }
 ]

@@ -34,7 +34,7 @@ const Header = () => {
         </ul>
       </nav>
       <a
-        href="#"
+        href=""
         onClick={() => toggleMenu()}
         className={headerStyles.toggleButton}
       >

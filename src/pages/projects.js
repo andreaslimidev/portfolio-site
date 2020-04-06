@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Layout from "../layouts/layout";
 import layoutStyles from "../layouts/layout.module.css";
 import projectStyles from "./project.module.css";
@@ -36,7 +36,7 @@ export default () => {
         <div className={projectStyles.columnLeft}>
           <h1 className="heading">Projects</h1>
           <h2 className="subHeading">(Scroll to view)</h2>
-          <p>Project talk</p>
+          <p>My collection of development projects.</p>
         </div>
         <div className={projectStyles.columnRight}>
           {projects.map(({ node: project }) => {

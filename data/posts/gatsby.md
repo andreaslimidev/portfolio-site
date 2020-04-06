@@ -1,5 +1,5 @@
 ---
-title: "Post 2 ez"
+title: "Example post 1"
 date: "2019-04-04"
 ---
 

@@ -17,18 +17,33 @@ const Header = () => {
       <nav className={show ? headerStyles.show : ""}>
         <ul>
           <li>
-            <Link onClick={toggleMenu} to="/projects">
+            <Link
+              onClick={toggleMenu}
+              to="/projects"
+              activeClassName={headerStyles.active}
+            >
               Projects
+              <div className={headerStyles.selected}></div>
             </Link>
           </li>
           <li>
-            <Link onClick={toggleMenu} to="/blog">
+            <Link
+              onClick={toggleMenu}
+              to="/blog"
+              activeClassName={headerStyles.active}
+            >
               Blog
+              <div className={headerStyles.selected}></div>
             </Link>
           </li>
           <li>
-            <Link onClick={toggleMenu} to="/contact">
+            <Link
+              onClick={toggleMenu}
+              to="/contact"
+              activeClassName={headerStyles.active}
+            >
               Contact
+              <div className={headerStyles.selected}></div>
             </Link>
           </li>
         </ul>
@@ -36,7 +51,9 @@ const Header = () => {
       <a
         href="#"
         onClick={() => toggleMenu()}
-        className={headerStyles.toggleButton}
+        className={`${headerStyles.toggleButton} ${
+          show ? headerStyles.activated : headerStyles.deactivated
+        }`}
       >
         <span className={headerStyles.bar}></span>
         <span className={headerStyles.bar}></span>

@@ -30,7 +30,7 @@ export default () => {
   return (
     <Layout>
       <div className={layoutStyles.container}>
-        <div className={layoutStyles.columnLeft}>
+        <div className={(layoutStyles.columnLeft, blogStyles.hide)}>
           <h1 className="heading">Blog</h1>
           <h2 className="subHeading">For the occasional post</h2>
           <p>

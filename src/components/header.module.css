@@ -12,7 +12,7 @@ header {
 }
 
 .logo:hover {
-  color: #CDCDCD;
+  color: #cdcdcd;
 }
 
 nav {
@@ -38,11 +38,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #CDCDCD;
+  color: #cdcdcd;
 }
 
 .toggleButton {
   display: none;
+  position: relative;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
@@ -59,6 +60,39 @@ nav ul li a:hover {
 @media (max-width: 650px) {
   header {
     flex-wrap: wrap;
+  }
+
+  .selected {
+    display: none;
+  }
+
+  .activated span {
+    position: absolute;
+    transition: 0.25s ease-in-out;
+  }
+
+  .activated span:nth-child(1) {
+    transform-origin: left center;
+    transform: rotate(45deg);
+    top: -3px;
+    left: 5px;
+  }
+
+  .activated span:nth-child(2) {
+    transform-origin: left center;
+    opacity: 0;
+    width: 0%;
+  }
+
+  .activated span:nth-child(3) {
+    transform-origin: left center;
+    transform: rotate(-45deg);
+    top: 18px;
+    left: 5px;
+  }
+
+  .deactivated span {
+    transition: 0.25s ease-in-out;
   }
 
   .toggleButton {
@@ -79,6 +113,9 @@ nav ul li a:hover {
     display: flex;
   }
 
+  .show > {
+  }
+
   nav ul {
     padding: 0;
     width: 100%;
@@ -95,4 +132,29 @@ nav ul li a:hover {
   }
 }
 
-/** Treaversy styles **/
+@keyframes fade {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+.selected {
+  margin-top: 0.25rem;
+  transition: opacity 1s linear;
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  border-bottom: 2px solid rgb(83, 83, 83);
+}
+
+.active > div {
+  opacity: 1;
+  animation: fade 1s;
+  visibility: visible;
+}

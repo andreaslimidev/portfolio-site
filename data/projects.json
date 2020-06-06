@@ -1,5 +1,26 @@
 [
   {
+    "title": "OsloTour",
+    "slug": "project-5",
+    "url": "",
+    "image": "./images/oslotour.png",
+    "description": "Fully fledged tourism application for android.",
+    "detailed": "Fully fledged tourism application for android. The app displays available activities in the city of Oslo, all while accounting for the current weather conditions. It does this using weather data from Metrologisk Institutt (MET) along with place/map data from various Google APIs. Architectural pattern used is MVVM. This project was a team effort.",
+    "technologies": [
+      "Android",
+      "Kotlin",
+      "Android Jetpack",
+      "KodeinDI",
+      "Retrofit + Gson"
+    ],
+    "features": [
+      "Find fitting activities in Oslo based on weather conditions",
+      "MVVM architecture",
+      "Follows Google's Material Design guidelines",
+      "Essential data is cached on your device"
+    ]
+  },
+  {
     "title": "My portfolio",
     "slug": "project-2",
     "url": "https://andreaslimi.com",
@@ -30,8 +51,18 @@
     ]
   },
   {
-    "title": "Example project",
+    "title": "Movie library",
     "slug": "project-3",
+    "url": "https://andreaslimidev-omdb.netlify.app/",
+    "image": "./images/omdb.png",
+    "description": "React application utlizing the OMDB API.",
+    "detailed": "React application utilizing the OMDB API. The application lets you search through the movies in the database, as well as providing details about each individual movie. The API-calls are relayed through a Node webserver.",
+    "technologies": ["React", "Javascript", "HTML", "CSS"],
+    "features": ["Find details about any movie."]
+  },
+  {
+    "title": "Example project",
+    "slug": "project-4",
     "url": "https://example.com",
     "image": "./images/example.png",
     "description": "This is an example project",

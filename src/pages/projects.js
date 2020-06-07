@@ -32,13 +32,8 @@ export default () => {
 
   return (
     <Layout>
-      <div className={layoutStyles.container}>
-        <div className={projectStyles.columnLeft}>
-          <h1 className="heading">Projects</h1>
-          <h2 className="subHeading">(Scroll to view)</h2>
-          <p>My collection of development projects.</p>
-        </div>
-        <div className={projectStyles.columnRight}>
+      <div className={projectStyles.scroll}>
+        <div className={projectStyles.grid}>
           {projects.map(({ node: project }) => {
             const title = project.title;
             const description = project.description;

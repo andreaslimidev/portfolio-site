@@ -9,13 +9,19 @@
   margin-top: 6rem;
 }
 
-@media (max-width: 1100px) {
-  .columnRight {
-    padding: 0;
-  }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4rem;
+  max-height: 80vh;
+}
+.scroll {
+  overflow-y: auto;
+}
 
-  .columnLeft {
-    display: none;
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr;
   }
 }
 
